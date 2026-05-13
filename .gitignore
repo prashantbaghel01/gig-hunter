@@ -1,0 +1,12 @@
+# Backend
+backend/node_modules/
+backend/.env
+backend/database.sqlite
+
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# System
+.DS_Store
+Thumbs.db
