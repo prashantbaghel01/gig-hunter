@@ -21,13 +21,13 @@ const PORT = process.env.PORT || 5000;
 
 // CORS — allow React dev server and production Vercel URL
 app.use(cors({
-  origin : [
-    process.env.CLIENT_URL || 'http://localhost:3000',
+  origin: [
+    'http://localhost:5173',
     'http://localhost:3000',
-    'http://localhost:3001',
+    process.env.CLIENT_URL,
   ],
-  methods        : ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
-  allowedHeaders : ['Content-Type', 'Authorization'],
+  methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
 }));
 
 app.use(express.json({ limit: '1mb' }));
